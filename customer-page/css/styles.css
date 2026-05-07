@@ -1,0 +1,98 @@
+body {
+    margin: 50px auto;
+    padding: 20px;
+    background-color: #f5f5f5;
+    width: auto;
+}
+
+main {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 20px;
+    background-color: #f5f5f5;
+    border-radius: 10px;
+    width: 50%;
+}
+
+.container {
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.header {
+    text-align: center;
+    margin-bottom: 20px;
+    font-family: 'Arial', sans-serif;
+    padding-bottom: 20px;
+    border-bottom: 1px solid #ccc;
+}
+
+.header h1 {
+    color: black;
+    font-size: 2rem;
+    font-weight: bold;
+    margin: 0;
+}
+
+.welcome {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.welcome h2 {
+    color: black;
+    font-size: 1.5rem;
+    font-weight: bold;
+    margin: 0;
+    font-family: 'Arial', sans-serif;
+}
+
+.questionnaire-form {
+    margin-bottom: 20px;
+    background-color: white;
+    padding: 40px;
+    border-radius: 10px;
+}
+
+.question {
+    margin-bottom: 30px;
+    padding-bottom: 20px;
+    border-bottom: 1px solid #eaeaea;
+}
+
+#q1 {
+    width: 100%;
+    margin: 10px 0;
+    padding: 10px;
+    border: none;
+}
+.progress-section {
+    text-align: center;
+    margin-top: 20px;
+    padding-top: 10px;
+    font-family: 'Arial', sans-serif;
+}
+
+.progress-section p {
+    color: #666;
+}
+.button-section {
+   display: flex;
+   justify-content: space-between;
+   margin-top: 20px;
+}
+
+button {
+    background-color: black;
+    color: white;
+    padding: 15px 30px;
+    border: none;
+    cursor: pointer;
+    margin: 10px;
+}
+
+.btn-secondary {
+    background-color: #049310;
+    color: white;
+}
