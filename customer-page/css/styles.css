@@ -108,3 +108,39 @@ button {
     background-color: #049310;
     color: white;
 }
+
+
+.page {
+    display: none; 
+}
+
+.page.active {
+    display: block; 
+}
+
+.page-navigation {
+    display: flex;
+    justify-content: flex-end;
+    margin-top: 30px;
+    padding-top: 20px;
+    border-top: 1px solid #e0e0e0;
+}
+
+.btn-prev, .btn-next {
+    background-color: black;
+    color: white;
+    padding: 15px 30px;
+    border: none;
+    cursor: pointer;
+    width: 30%;
+    margin: 10px;
+}
+
+.btn-prev:hover, .btn-next:hover {
+    background-color: #c4c6c9;
+}
+
+.btn-prev:disabled, .btn-next:disabled {
+    background-color: #e52929;
+    cursor: not-allowed;
+}
