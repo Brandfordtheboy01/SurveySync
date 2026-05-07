@@ -3,51 +3,48 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Document</title>
+    <title>SurveySync - Sign In</title>
+
     <link rel="stylesheet" href="styles/index.css" />
   </head>
+
   <body>
     <div class="wrapper">
       <!-- ── LEFT PANEL ── -->
-      <aside class="left-panel">
+      <div class="left-panel">
         <!-- Logo -->
         <div class="logo">
           <div class="logo-icon">
-            <svg viewBox="0 0 16 16"><path d="M2 8L8 2L14 8L8 14Z" /></svg>
+            <img
+              src="styles/svg/logo-google-android-studio-svgrepo-com.svg"
+              alt="icon"
+            />
           </div>
-          <span class="logo-text">space</span>
+          <span class="logo-text">SurveySync</span>
         </div>
 
-        <!-- Form -->
-        <div class="form-area">
+        <!-- FORM -->
+        <form class="form-area">
           <h1>Sign In</h1>
 
+          <!-- Username -->
           <div class="field">
             <label for="username">User Name</label>
+
             <div class="input-wrap">
-              <div class="flag-badge">
-                <span>🇺🇸</span>
-              </div>
-              <input
-                id="username"
-                type="text"
-                placeholder="Enter username"
-                value="Filip"
-                autocomplete="username"
-              />
+              <input id="username" type="text" placeholder="Enter username" />
             </div>
           </div>
 
+          <!-- Password -->
           <div class="field">
             <label for="password">Password</label>
+
             <div class="input-wrap">
               <div class="icon">
-                <!-- Lock icon -->
-                <svg viewBox="0 0 24 24">
-                  <rect x="5" y="11" width="14" height="10" rx="2" />
-                  <path d="M8 11V7a4 4 0 0 1 8 0v4" />
-                </svg>
+                <img src="styles/svg/padlock-outlined-svgrepo-com.svg" alt="" />
               </div>
+
               <input
                 id="password"
                 type="password"
@@ -55,44 +52,38 @@
                 autocomplete="current-password"
               />
             </div>
+            <small class="password-error"></small>
+
             <a href="#" class="forgot-link">Forgot Password?</a>
           </div>
 
-          <button class="btn-signin" type="button">Sign In</button>
-        </div>
+          <!-- Button -->
+          <button class="btn-signin" type="submit">Sign In</button>
+        </form>
 
         <!-- Footer -->
         <p class="panel-footer">
           Don't have an account? <a href="#">Sign up</a>
         </p>
-      </aside>
+      </div>
 
       <!-- ── RIGHT PANEL ── -->
-      <main class="right-panel">
-        <!--
-      YOUR IMAGE GOES HERE
-      Replace "your-image.jpg" with your actual image path or URL.
-      Example: <img src="./assets/hero.jpg" ... />
-    -->
-        <img class="bg-image" src="your-image.jpg" alt="Background" />
+      <div class="right-panel">
+        <img
+          class="bg-image"
+          src="styles/images/download - 2026-05-07T134545.837.jpg"
+          alt="Background"
+        />
 
-        <!-- Subtle dark overlay -->
-        <div class="overlay"></div>
-
-        <!-- Text on top -->
         <div class="panel-content">
           <p class="tagline">
-            A new way to experience real estate<br />in the infinite virtual
-            space.
+            A simple system for collecting and analyzing customer responses.
           </p>
+
           <a href="#" class="learn-more">Learn More</a>
         </div>
-
-        <!-- Next slide arrow -->
-        <div class="carousel-arrow" role="button" aria-label="Next slide">
-          <svg viewBox="0 0 24 24"><polyline points="9 18 15 12 9 6" /></svg>
-        </div>
-      </main>
+      </div>
     </div>
+    <script src="index.js"></script>
   </body>
 </html>

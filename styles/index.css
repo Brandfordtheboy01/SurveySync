@@ -32,14 +32,21 @@ body {
 .wrapper {
   display: flex;
   min-height: 100vh;
-}      
+}
 /* ─── Left Panel ─────────────────────────────────────────── */
 .left-panel {
+  width: 40%;
   background: var(--bg-panel);
   display: flex;
   flex-direction: column;
   padding: 40px 36px;
   position: relative;
+}
+.right-panel {
+  width: 60%;
+  position: relative;
+  overflow: hidden;
+  background: #1a1a1a;
 }
 
 .logo {
@@ -50,23 +57,22 @@ body {
 }
 
 .logo-icon {
-  width: 28px;
-  height: 28px;
-  background: var(--accent-blue);
+  width: 34px;
+  height: 34px;
   border-radius: 6px;
   display: flex;
   align-items: center;
   justify-content: center;
 }
 
-.logo-icon svg {
-  width: 16px;
-  height: 16px;
+.logo-icon img {
+  width: 34px;
+  height: 34px;
   fill: #fff;
 }
 
 .logo-text {
-  font-size: 15px;
+  font-size: 20px;
   font-weight: 600;
   color: var(--text-primary);
   letter-spacing: 0.02em;
@@ -93,7 +99,7 @@ body {
 
 .field label {
   display: block;
-  font-size: 12px;
+  font-size: 15px;
   font-weight: 500;
   color: var(--text-primary);
   letter-spacing: 0.04em;
@@ -122,31 +128,12 @@ body {
   flex-shrink: 0;
 }
 
-.input-wrap .icon svg {
+.input-wrap .icon img {
   width: 16px;
   height: 16px;
   fill: none;
   stroke: var(--text-muted);
   stroke-width: 1.6;
-}
-
-/* Flag emoji badge */
-.flag-badge {
-  display: flex;
-  align-items: center;
-  gap: 6px;
-  background: #2a2a2a;
-  border-radius: 3px;
-  padding: 2px 6px;
-  margin-right: 8px;
-  font-size: 13px;
-  flex-shrink: 0;
-}
-
-.flag-badge span {
-  font-size: 12px;
-  color: var(--text-primary);
-  font-weight: 500;
 }
 
 .input-wrap input {
@@ -174,6 +161,12 @@ body {
   letter-spacing: 0.08em;
   text-transform: uppercase;
   transition: color 0.2s;
+}
+.password-error {
+  color: red;
+  font-size: 12px;
+  margin-top: 6px;
+  display: block;
 }
 
 .forgot-link:hover {
@@ -231,13 +224,6 @@ body {
   background: #1a1a1a;
 }
 
-/*
-     * ── YOUR IMAGE ──────────────────────────────────────────────
-     * Replace the src below with your own image path.
-     * The <img> is already absolutely positioned and covers the
-     * full right panel with object-fit: cover.
-     * ────────────────────────────────────────────────────────────
-     */
 .right-panel .bg-image {
   position: absolute;
   inset: 0;
@@ -246,17 +232,6 @@ body {
   object-fit: cover;
   object-position: center;
   display: block;
-}
-
-/* Dark overlay so text stays readable */
-.right-panel .overlay {
-  position: absolute;
-  inset: 0;
-  background: linear-gradient(
-    to right,
-    rgba(10, 10, 10, 0.45) 0%,
-    rgba(10, 10, 10, 0.1) 100%
-  );
 }
 
 /* Text content on top of image */
@@ -276,6 +251,7 @@ body {
   max-width: 400px;
   color: var(--text-primary);
   margin-bottom: 24px;
+  text-align: justify;
 }
 
 .panel-content .learn-more {
@@ -298,48 +274,14 @@ body {
   border-color: #aaa;
 }
 
-/* Carousel arrow (bottom right) */
-.carousel-arrow {
-  position: absolute;
-  bottom: 32px;
-  right: 32px;
-  width: 40px;
-  height: 40px;
-  border: 1px solid rgba(255, 255, 255, 0.4);
-  border-radius: 50%;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  cursor: pointer;
-  transition:
-    background 0.2s,
-    border-color 0.2s;
-}
-
-.carousel-arrow:hover {
-  background: rgba(255, 255, 255, 0.12);
-  border-color: rgba(255, 255, 255, 0.7);
-}
-
-.carousel-arrow svg {
-  width: 14px;
-  height: 14px;
-  stroke: #fff;
-  stroke-width: 2;
-  fill: none;
-}
-
 /* ─── Responsive ─────────────────────────────────────────── */
 @media (max-width: 768px) {
-  .wrapper {
-    grid-template-columns: 1fr;
-  }
-
   .right-panel {
     display: none;
   }
 
   .left-panel {
+    width: 100%;
     padding: 32px 24px;
   }
 }
