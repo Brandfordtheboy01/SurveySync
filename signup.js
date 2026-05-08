@@ -33,7 +33,7 @@ function validateUsername() {
     usernameError.textContent = "Please enter a username.";
     return false;
   }
-  if (!/^[A-Za-z]+$/.test(value)) {
+  if (!/^[A-Za-z\s]+$/.test(value)) {
     usernameError.textContent = "Username must contain letters only.";
     return false;
   }
