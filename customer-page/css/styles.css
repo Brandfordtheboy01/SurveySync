@@ -27,6 +27,11 @@ body {
   background-color: #f5f5f5;
   font-family: var(--font);
   width: auto;
+  background-image: url("/styles/images/download\ -\ 2026-05-08T095327.579.jpg");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
 }
 
 main {
@@ -41,7 +46,7 @@ main {
 .container {
   padding: 30px;
   border-radius: 10px;
-  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  box-shadow: 0 4px 6px gray;
 }
 
 /* ─── Header ────────────────────────────────────────────── */
@@ -186,7 +191,9 @@ button {
   letter-spacing: 0.08em;
   text-transform: uppercase;
   border-radius: 4px;
-  transition: background 0.2s, transform 0.2s;
+  transition:
+    background 0.2s,
+    transform 0.2s;
 }
 
 .btn-prev:hover,

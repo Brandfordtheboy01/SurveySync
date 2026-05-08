@@ -1,159 +1,257 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
-
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Customer Page</title>
-    <link rel="stylesheet" href="css/styles.css">
-</head>
+    <link rel="stylesheet" href="css/styles.css" />
+  </head>
 
-<body>
+  <body>
     <main>
-        <div class="container">
-            <div class="header">
-                <h1>Customer Page</h1>
-            </div>
+      <div class="container">
+        <div class="header">
+          <h1>Customer Page</h1>
+        </div>
 
-            <div class="welcome">
-                <h2>Welcome to the Customer Page (Questions)</h2>
-            </div>
+        <div class="welcome">
+          <h2>Welcome to the Customer Page (Questions)</h2>
+        </div>
 
-           <div class="questionnaire-form">
-    <form id="questionnaireForm">
-        <!-- Page 1: Personal Info -->
-        <div class="page active" data-page="1">
-            <div class="question">
+        <div class="questionnaire-form">
+          <form id="questionnaireForm">
+            <!-- Page 1: Personal Info -->
+            <div class="page active" data-page="1">
+              <div class="question">
                 <label>1. What is your full name?</label>
-                <input type="text" id="q1" name="fullname" placeholder="Enter your full name">
-            </div>
-            <div class="question">
+                <input
+                  type="text"
+                  id="q1"
+                  name="fullname"
+                  placeholder="Enter your full name"
+                />
+              </div>
+              <div class="question">
                 <label>2. How did you hear about us?</label>
                 <div class="radio-group">
-                    <input type="radio" name="q2" value="social" id="social">
-                    <label for="social">Social Media</label>
-                    <input type="radio" name="q2" value="search" id="search">
-                    <label for="search">Search Engine</label>
-                    <input type="radio" name="q2" value="friend" id="friend">
-                    <label for="friend">Friend</label>
-                    <input type="radio" name="q2" value="other" id="other">
-                    <label for="other">Other</label>
+                  <input type="radio" name="q2" value="social" id="social" />
+                  <label for="social">Social Media</label>
+                  <input type="radio" name="q2" value="search" id="search" />
+                  <label for="search">Search Engine</label>
+                  <input type="radio" name="q2" value="friend" id="friend" />
+                  <label for="friend">Friend</label>
+                  <input type="radio" name="q2" value="other" id="other" />
+                  <label for="other">Other</label>
                 </div>
+              </div>
+              <div class="page-navigation">
+                <button type="button" class="btn-next" >
+                  Next
+                </button>
+              </div>
             </div>
-            <div class="page-navigation">
-                <button type="button" class="btn-next" onclick="nextPage()">Next</button>
-            </div>
-        </div>
 
-        <!-- Page 2: Product Usage -->
-        <div class="page" data-page="2">
-            <div class="question">
+            <!-- Page 2: Product Usage -->
+            <div class="page" data-page="2">
+              <div class="question">
                 <label>3. Which products have you used?</label>
                 <div class="checkbox-group">
-                    <input type="checkbox" name="q3" value="productA" id="productA">
-                    <label for="productA">Product A</label>
-                    <input type="checkbox" name="q3" value="productB" id="productB">
-                    <label for="productB">Product B</label>
-                    <input type="checkbox" name="q3" value="productC" id="productC">
-                    <label for="productC">Product C</label>
+                  <input
+                    type="checkbox"
+                    name="q3"
+                    value="productA"
+                    id="productA"
+                  />
+                  <label for="productA">Product A</label>
+                  <input
+                    type="checkbox"
+                    name="q3"
+                    value="productB"
+                    id="productB"
+                  />
+                  <label for="productB">Product B</label>
+                  <input
+                    type="checkbox"
+                    name="q3"
+                    value="productC"
+                    id="productC"
+                  />
+                  <label for="productC">Product C</label>
                 </div>
-            </div>
-            <div class="question">
+              </div>
+              <div class="question">
                 <label>4. Rate your overall satisfaction (1-5):</label>
                 <div class="rating-group">
-                    <input type="radio" name="q4" value="1" id="q4-1"><label for="q4-1">1</label>
-                    <input type="radio" name="q4" value="2" id="q4-2"><label for="q4-2">2</label>
-                    <input type="radio" name="q4" value="3" id="q4-3"><label for="q4-3">3</label>
-                    <input type="radio" name="q4" value="4" id="q4-4"><label for="q4-4">4</label>
-                    <input type="radio" name="q4" value="5" id="q4-5"><label for="q4-5">5</label>
+                  <input type="radio" name="q4" value="1" id="q4-1" /><label
+                    for="q4-1"
+                    >1</label
+                  >
+                  <input type="radio" name="q4" value="2" id="q4-2" /><label
+                    for="q4-2"
+                    >2</label
+                  >
+                  <input type="radio" name="q4" value="3" id="q4-3" /><label
+                    for="q4-3"
+                    >3</label
+                  >
+                  <input type="radio" name="q4" value="4" id="q4-4" /><label
+                    for="q4-4"
+                    >4</label
+                  >
+                  <input type="radio" name="q4" value="5" id="q4-5" /><label
+                    for="q4-5"
+                    >5</label
+                  >
                 </div>
+              </div>
+              <div class="page-navigation">
+                <button type="button" class="btn-prev" >
+                  Previous
+                </button>
+                <button type="button" class="btn-next" >
+                  Next
+                </button>
+              </div>
             </div>
-            <div class="page-navigation">
-                <button type="button" class="btn-prev" onclick="previousPage()">Previous</button>
-                <button type="button" class="btn-next" onclick="nextPage()">Next</button>
-            </div>
-        </div>
 
-        <!-- Page 3: Support & Recommendation -->
-        <div class="page" data-page="3">
-            <div class="question">
+            <!-- Page 3: Support & Recommendation -->
+            <div class="page" data-page="3">
+              <div class="question">
                 <label>5. Rate the quality of our support (1-5):</label>
                 <div class="rating-group">
-                    <input type="radio" name="q5" value="1" id="q5-1"><label for="q5-1">1</label>
-                    <input type="radio" name="q5" value="2" id="q5-2"><label for="q5-2">2</label>
-                    <input type="radio" name="q5" value="3" id="q5-3"><label for="q5-3">3</label>
-                    <input type="radio" name="q5" value="4" id="q5-4"><label for="q5-4">4</label>
-                    <input type="radio" name="q5" value="5" id="q5-5"><label for="q5-5">5</label>
+                  <input type="radio" name="q5" value="1" id="q5-1" /><label
+                    for="q5-1"
+                    >1</label
+                  >
+                  <input type="radio" name="q5" value="2" id="q5-2" /><label
+                    for="q5-2"
+                    >2</label
+                  >
+                  <input type="radio" name="q5" value="3" id="q5-3" /><label
+                    for="q5-3"
+                    >3</label
+                  >
+                  <input type="radio" name="q5" value="4" id="q5-4" /><label
+                    for="q5-4"
+                    >4</label
+                  >
+                  <input type="radio" name="q5" value="5" id="q5-5" /><label
+                    for="q5-5"
+                    >5</label
+                  >
                 </div>
-            </div>
-            <div class="question">
+              </div>
+              <div class="question">
                 <label>6. Would you recommend us to a friend?</label>
                 <div class="radio-group">
-                    <input type="radio" name="q6" value="yes" id="yes">
-                    <label for="yes">Yes</label>
-                    <input type="radio" name="q6" value="no" id="no">
-                    <label for="no">No</label>
-                    <input type="radio" name="q6" value="maybe" id="maybe">
-                    <label for="maybe">Maybe</label>
+                  <input type="radio" name="q6" value="yes" id="yes" />
+                  <label for="yes">Yes</label>
+                  <input type="radio" name="q6" value="no" id="no" />
+                  <label for="no">No</label>
+                  <input type="radio" name="q6" value="maybe" id="maybe" />
+                  <label for="maybe">Maybe</label>
                 </div>
+              </div>
+              <div class="page-navigation">
+                <button type="button" class="btn-prev">
+                  Previous
+                </button>
+                <button type="button" class="btn-next" >
+                  Next
+                </button>
+              </div>
             </div>
-            <div class="page-navigation">
-                <button type="button" class="btn-prev" onclick="previousPage()">Previous</button>
-                <button type="button" class="btn-next" onclick="nextPage()">Next</button>
-            </div>
-        </div>
 
-        <!-- Page 4: Features & Usability -->
-        <div class="page" data-page="4">
-            <div class="question">
+            <!-- Page 4: Features & Usability -->
+            <div class="page" data-page="4">
+              <div class="question">
                 <label>7. Which features do you find most valuable?</label>
                 <div class="checkbox-group">
-                    <input type="checkbox" name="q7" value="featureX" id="featureX">
-                    <label for="featureX">Feature X</label>
-                    <input type="checkbox" name="q7" value="featureY" id="featureY">
-                    <label for="featureY">Feature Y</label>
-                    <input type="checkbox" name="q7" value="featureZ" id="featureZ">
-                    <label for="featureZ">Feature Z</label>
+                  <input
+                    type="checkbox"
+                    name="q7"
+                    value="featureX"
+                    id="featureX"
+                  />
+                  <label for="featureX">Feature X</label>
+                  <input
+                    type="checkbox"
+                    name="q7"
+                    value="featureY"
+                    id="featureY"
+                  />
+                  <label for="featureY">Feature Y</label>
+                  <input
+                    type="checkbox"
+                    name="q7"
+                    value="featureZ"
+                    id="featureZ"
+                  />
+                  <label for="featureZ">Feature Z</label>
                 </div>
-            </div>
-            <div class="question">
+              </div>
+              <div class="question">
                 <label>8. Rate the ease of use of our product (1-5):</label>
                 <div class="rating-group">
-                    <input type="radio" name="q8" value="1" id="q8-1"><label for="q8-1">1</label>
-                    <input type="radio" name="q8" value="2" id="q8-2"><label for="q8-2">2</label>
-                    <input type="radio" name="q8" value="3" id="q8-3"><label for="q8-3">3</label>
-                    <input type="radio" name="q8" value="4" id="q8-4"><label for="q8-4">4</label>
-                    <input type="radio" name="q8" value="5" id="q8-5"><label for="q8-5">5</label>
+                  <input type="radio" name="q8" value="1" id="q8-1" /><label
+                    for="q8-1"
+                    >1</label
+                  >
+                  <input type="radio" name="q8" value="2" id="q8-2" /><label
+                    for="q8-2"
+                    >2</label
+                  >
+                  <input type="radio" name="q8" value="3" id="q8-3" /><label
+                    for="q8-3"
+                    >3</label
+                  >
+                  <input type="radio" name="q8" value="4" id="q8-4" /><label
+                    for="q8-4"
+                    >4</label
+                  >
+                  <input type="radio" name="q8" value="5" id="q8-5" /><label
+                    for="q8-5"
+                    >5</label
+                  >
                 </div>
+              </div>
+              <div class="page-navigation">
+               <button type="button" class="btn-prev">Previous</button>
+<button type="button" class="btn-next">Next</button>
+                </button>
+              </div>
             </div>
-            <div class="page-navigation">
-                <button type="button" class="btn-prev" onclick="previousPage()">Previous</button>
-                <button type="button" class="btn-next" onclick="nextPage()">Next</button>
-            </div>
-        </div>
 
-        <!-- Page 5: Feedback & Comments -->
-        <div class="page" data-page="5">
-            <div class="question">
+            <!-- Page 5: Feedback & Comments -->
+            <div class="page" data-page="5">
+              <div class="question">
                 <label>9. What could we improve?</label>
-                <textarea id="q9" name="improvement" rows="4" placeholder="Tell us how we can improve..."></textarea>
-            </div>
-            <div class="question">
+                <textarea
+                  id="q9"
+                  name="improvement"
+                  rows="4"
+                  placeholder="Tell us how we can improve..."
+                ></textarea>
+              </div>
+              <div class="question">
                 <label>10. Any additional comments?</label>
-                <textarea id="q10" name="comments" rows="4" placeholder="Any other feedback you'd like to share..."></textarea>
+                <textarea
+                  id="q10"
+                  name="comments"
+                  rows="4"
+                  placeholder="Any other feedback you'd like to share..."
+                ></textarea>
+              </div>
+              <div class="page-navigation">
+                <button type="button" class="btn-prev">Previous</button>
+                <button type="submit" class="btn-next">Submit</button>
+                </button>
+              </div>
             </div>
-            <div class="page-navigation">
-                <button type="button" class="btn-prev" onclick="previousPage()">Previous</button>
-                <button type="button" class="btn-next" onclick="nextPage()">Submit</button>
-            </div>
+          </form>
         </div>
-        
-    </form>
-</div>
-
-        </div>
+      </div>
     </main>
     <script src="js/script.js"></script>
-</body>
-
+  </body>
 </html>

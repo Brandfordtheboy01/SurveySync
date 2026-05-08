@@ -6,6 +6,16 @@ document.addEventListener('DOMContentLoaded', function() {
     const form = document.getElementById("questionnaireForm");
 
     showPage(1);
+    const nextButtons = document.querySelectorAll('.btn-next');
+    const prevButtons = document.querySelectorAll('.btn-prev');
+
+    nextButtons.forEach(btn => {
+        btn.addEventListener('click', nextPage);
+    });
+
+    prevButtons.forEach(btn => {
+        btn.addEventListener('click', previousPage);
+    });
     console.log('DOM Loaded');
 });
 
