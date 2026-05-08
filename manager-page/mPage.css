@@ -1,0 +1,380 @@
+/* ─── Design Tokens (matches login & signup pages) ─────── */
+:root {
+  --bg-dark: #111111;
+  --bg-panel: #181818;
+  --accent-blue: #2d4ef5;
+  --accent-hover: #1a3de0;
+  --text-primary: #ffffff;
+  --text-muted: #888888;
+  --text-link: #5577ff;
+  --border-color: #2e2e2e;
+  --input-bg: #1e1e1e;
+  --font: "Barlow", sans-serif;
+
+  /* Dashboard specific */
+  --bg-page: #fafafa;
+  --bg-white: #ffffff;
+  --text-dark: #1a1a1a;
+  --text-gray: #6b6b6b;
+  --text-light-gray: #9ca3af;
+  --border-light: #eeeeee;
+  --border-medium: #e5e5e5;
+  --red: #ef4444;
+  --red-hover: #dc2626;
+  --blue: #3b82f6;
+  --blue-hover: #2563eb;
+}
+
+/* ─── Reset & Base ──────────────────────────────────────── */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  background-color: var(--bg-page);
+  color: var(--text-dark);
+  font-family: var(--font);
+  font-size: 14px;
+}
+
+/* ─── Navbar ────────────────────────────────────────────── */
+.navbar {
+  background-color: var(--bg-white);
+  border-bottom: 1px solid var(--border-light);
+  padding: 16px 32px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  position: sticky;
+  top: 0;
+  z-index: 50;
+}
+
+.nav-logo {
+  font-weight: 700;
+  letter-spacing: -0.05em;
+  font-size: 16px;
+}
+
+.nav-logo-muted {
+  color: var(--text-light-gray);
+}
+
+.nav-actions {
+  display: flex;
+  gap: 16px;
+}
+
+/* Outline button */
+.btn-outline {
+  font-size: 11px;
+  font-weight: 600;
+  padding: 8px 16px;
+  border: 1px solid var(--text-dark);
+  background: transparent;
+  color: var(--text-dark);
+  cursor: pointer;
+  transition:
+    background 0.2s,
+    color 0.2s;
+  font-family: var(--font);
+}
+
+.btn-outline:hover {
+  background-color: var(--text-dark);
+  color: var(--bg-white);
+}
+
+/* Solid button */
+.btn-solid {
+  font-size: 11px;
+  font-weight: 600;
+  padding: 8px 16px;
+  background-color: var(--text-dark);
+  color: var(--bg-white);
+  border: none;
+  cursor: pointer;
+  font-family: var(--font);
+  transition: background 0.2s;
+}
+
+.btn-solid:hover {
+  background-color: #333;
+}
+
+/* ─── Main Container ────────────────────────────────────── */
+.main-container {
+  max-width: 900px;
+  margin: 0 auto;
+  padding: 48px 16px;
+}
+
+/* ─── Top Grid ──────────────────────────────────────────── */
+.top-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 40px;
+  margin-bottom: 0;
+}
+
+/* ─── Section Title ─────────────────────────────────────── */
+.section-title {
+  font-size: 13px;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.15em;
+  color: var(--text-light-gray);
+  margin-bottom: 24px;
+}
+
+/* ─── Card ──────────────────────────────────────────────── */
+.card {
+  background: var(--bg-white);
+  border: 1px solid var(--border-light);
+  padding: 24px;
+  border-radius: 4px;
+  margin-bottom: 24px;
+}
+
+.card-center {
+  text-align: center;
+}
+
+.card-subtitle {
+  font-size: 11px;
+  font-weight: 700;
+  margin-bottom: 16px;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+}
+
+/* ─── Stat Card ─────────────────────────────────────────── */
+.stat-label {
+  color: var(--text-light-gray);
+  font-size: 11px;
+  margin-bottom: 8px;
+}
+
+.stat-number {
+  font-size: 48px;
+  font-weight: 300;
+  color: var(--text-dark);
+}
+
+/* ─── Form Fields ───────────────────────────────────────── */
+.field-label {
+  display: block;
+  font-size: 11px;
+  font-weight: 700;
+  margin-bottom: 8px;
+  color: var(--text-dark);
+}
+
+.input-minimal {
+  border: none;
+  border-bottom: 1px solid var(--border-medium);
+  padding: 8px 0;
+  outline: none;
+  transition: border-color 0.3s;
+  width: 100%;
+  margin-bottom: 24px;
+  font-family: var(--font);
+  font-size: 14px;
+  background: transparent;
+  color: var(--text-dark);
+}
+
+.input-minimal:focus {
+  border-bottom-color: var(--text-dark);
+}
+
+.select-input {
+  width: 100%;
+  border: 1px solid var(--border-medium);
+  padding: 8px;
+  font-size: 13px;
+  margin-bottom: 24px;
+  font-family: var(--font);
+  outline: none;
+  background: var(--bg-white);
+  color: var(--text-dark);
+  cursor: pointer;
+}
+
+.select-input:focus {
+  border-color: var(--text-dark);
+}
+
+/* Full-width block button */
+.btn-block {
+  width: 100%;
+  background-color: var(--text-dark);
+  color: var(--bg-white);
+  padding: 12px;
+  font-size: 10px;
+  text-transform: uppercase;
+  letter-spacing: 0.15em;
+  border: none;
+  cursor: pointer;
+  font-family: var(--font);
+  font-weight: 600;
+  transition: background 0.2s;
+}
+
+.btn-block:hover {
+  background-color: #333;
+}
+
+/* ─── Response List ─────────────────────────────────────── */
+.response-list {
+  list-style: none;
+  font-size: 11px;
+  color: var(--text-gray);
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.response-list li {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+/* ─── Questions Section ─────────────────────────────────── */
+.questions-section {
+  margin-top: 48px;
+}
+
+.questions-list {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+/* Question card row */
+.question-card {
+  background: var(--bg-white);
+  border: 1px solid var(--border-light);
+  padding: 24px;
+  border-radius: 4px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.question-card-info {
+  flex: 1;
+}
+
+.question-card-text {
+  font-size: 14px;
+  font-weight: 500;
+  color: var(--text-dark);
+}
+
+.question-card-type {
+  font-size: 11px;
+  color: var(--text-gray);
+  margin-top: 4px;
+}
+
+.question-card-actions {
+  display: flex;
+  gap: 8px;
+}
+
+/* Edit button */
+.btn-edit {
+  font-size: 11px;
+  padding: 4px 12px;
+  border: 1px solid var(--text-dark);
+  background: transparent;
+  color: var(--text-dark);
+  cursor: pointer;
+  font-family: var(--font);
+  transition:
+    background 0.2s,
+    color 0.2s;
+}
+
+.btn-edit:hover {
+  background-color: var(--text-dark);
+  color: var(--bg-white);
+}
+
+/* Delete button */
+.btn-delete {
+  font-size: 11px;
+  padding: 4px 12px;
+  border: 1px solid var(--red);
+  background: transparent;
+  color: var(--red);
+  cursor: pointer;
+  font-family: var(--font);
+  transition:
+    background 0.2s,
+    color 0.2s;
+}
+
+.btn-delete:hover {
+  background-color: var(--red);
+  color: var(--bg-white);
+}
+
+/* View submission button */
+.btn-view {
+  font-size: 11px;
+  padding: 4px 8px;
+  border: 1px solid var(--text-dark);
+  background: transparent;
+  color: var(--text-dark);
+  cursor: pointer;
+  font-family: var(--font);
+  transition:
+    background 0.2s,
+    color 0.2s;
+}
+
+.btn-view:hover {
+  background-color: var(--text-dark);
+  color: var(--bg-white);
+}
+
+/* Simulate button */
+.btn-simulate {
+  width: 100%;
+  background-color: var(--blue);
+  color: var(--bg-white);
+  padding: 8px;
+  font-size: 11px;
+  border: none;
+  cursor: pointer;
+  margin-top: 16px;
+  font-family: var(--font);
+  transition: background 0.2s;
+}
+
+.btn-simulate:hover {
+  background-color: var(--blue-hover);
+}
+
+/* ─── Responsive ────────────────────────────────────────── */
+@media (max-width: 768px) {
+  .top-grid {
+    grid-template-columns: 1fr;
+    gap: 0;
+  }
+
+  .navbar {
+    padding: 16px;
+  }
+
+  .nav-actions {
+    gap: 8px;
+  }
+}

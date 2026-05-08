@@ -1,0 +1,77 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>SurveyCore Manager Dashboard</title>
+    <link rel="stylesheet" href="/manager-page/mPage.css" />
+  </head>
+  <body>
+    <!-- ── NAVBAR ── -->
+    <nav class="navbar">
+      <div class="nav-logo">SURVEY<span class="nav-logo-muted">SYNC</span></div>
+      <div class="nav-actions">
+        <button class="btn-outline" >User View</button>
+        <button class="btn-solid">Manager Dashboard</button>
+      </div>
+    </nav>
+
+    <!-- ── MAIN CONTENT ── -->
+    <main class="main-container">
+      <!-- Top Grid: Add Question + Survey Stats -->
+      <div class="top-grid">
+        <!-- Add New Question -->
+        <section>
+          <h2 class="section-title">Add New Question</h2>
+          <div class="card">
+            <label class="field-label" for="newQuestText">Question Text</label>
+            <input
+              type="text"
+              id="newQuestText"
+              placeholder="e.g. Rate our service"
+              class="input-minimal"
+            />
+
+            <label class="field-label" for="newQuestType">Input Type</label>
+            <select id="newQuestType" class="select-input">
+              <option value="text">Open Text</option>
+              <option value="radio">Single Choice (Yes/No)</option>
+              <option value="rating">Rating Scale (1-5)</option>
+            </select>
+
+            <button class="btn-block" onclick="addNewQuestion()">
+              Add to Survey
+            </button>
+          </div>
+        </section>
+
+        <!-- Survey Stats -->
+        <section>
+          <h2 class="section-title">Survey Stats</h2>
+
+          <div class="card card-center">
+            <p class="stat-label">Total Questions Active</p>
+            <h3 id="activeQuestCount" class="stat-number">10</h3>
+          </div>
+
+          <div class="card">
+            <h4 class="card-subtitle">Response List</h4>
+            <ul id="managerResponseList" class="response-list">
+              <li>No submissions yet.</li>
+            </ul>
+          </div>
+        </section>
+      </div>
+
+      <!-- Current Questions List -->
+      <section class="questions-section">
+        <h2 class="section-title">Current Questions</h2>
+        <div id="questionsList" class="questions-list">
+          <!-- Rendered by JS -->
+        </div>
+      </section>
+    </main>
+
+    <script src="mPage.js"></script>
+  </body>
+</html>
