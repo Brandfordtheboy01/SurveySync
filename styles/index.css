@@ -168,6 +168,12 @@ body {
   margin-top: 6px;
   display: block;
 }
+.username-error {
+  color: red;
+  font-size: 12px;
+  margin-top: 6px;
+  display: block;
+}
 
 .forgot-link:hover {
   color: var(--text-primary);
@@ -190,11 +196,12 @@ body {
   cursor: pointer;
   transition:
     background 0.2s,
-    transform 0.1s;
+    transform 0.3s ease;
 }
 
 .btn-signin:hover {
   background: var(--accent-hover);
+  transform: scale(0.95);
 }
 
 .btn-signin:active {
@@ -222,6 +229,9 @@ body {
   position: relative;
   overflow: hidden;
   background: #1a1a1a;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
 .right-panel .bg-image {
@@ -241,17 +251,32 @@ body {
   display: flex;
   flex-direction: column;
   justify-content: center;
+  align-items: center;
   padding: 60px;
+}
+.panel-content h2 {
+  font-size: 64px;
+  font-weight: 700;
+  margin-bottom: 40px;
+  transition:
+    color 0.3s ease,
+    transform 0.3s ease;
+  cursor: pointer;
+}
+.panel-content h2:hover {
+  color: var(--accent-blue);
+  transform: scale(1.05);
 }
 
 .panel-content .tagline {
-  font-size: 26px;
+  font-size: 18px;
   font-weight: 300;
   line-height: 1.4;
-  max-width: 400px;
+  max-width: auto;
   color: var(--text-primary);
   margin-bottom: 24px;
-  text-align: justify;
+  line-height: 40px;
+  text-align: center;
 }
 
 .panel-content .learn-more {
