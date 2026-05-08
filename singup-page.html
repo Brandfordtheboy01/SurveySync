@@ -3,9 +3,9 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>SurveySync - Sign In</title>
+    <title>SurveySync - Sign Up</title>
 
-    <link rel="stylesheet" href="styles/index.css" />
+    <link rel="stylesheet" href="styles/sign-up.css" />
   </head>
 
   <body>
@@ -24,47 +24,67 @@
         </div>
 
         <!-- FORM -->
-        <form class="form-area">
-          <h1>Sign In</h1>
+        <form class="form-area" id="signup-form">
+          <h1>Sign Up</h1>
+          <p class="form-subtitle">
+            Welcome to SurveySync. Please sign up to your account.
+          </p>
 
-          <!-- Username -->
+          <!-- Email -->
           <div class="field">
-            <label for="username">User Name</label>
-
-            <div class="input-wrap">
-              <input id="username" type="text" placeholder="Enter username" />
-            </div>
-          </div>
-          <small class="username-error"></small>
-
-          <!-- Password -->
-          <div class="field">
-            <label for="password">Password</label>
-
+            <label for="email">Email</label>
             <div class="input-wrap">
               <div class="icon">
                 <img src="styles/svg/padlock-outlined-svgrepo-com.svg" alt="" />
               </div>
+              <input
+                id="email"
+                type="email"
+                placeholder="Enter your email"
+                autocomplete="email"
+              />
+            </div>
+            <small class="email-error"></small>
+          </div>
 
+          <!-- Username -->
+          <div class="field">
+            <label for="username">Username</label>
+            <div class="input-wrap">
+              <input
+                id="username"
+                type="text"
+                placeholder="Enter your username"
+                autocomplete="username"
+              />
+            </div>
+            <small class="username-error"></small>
+          </div>
+
+          <!-- Password -->
+          <div class="field">
+            <label for="password">Password</label>
+            <div class="input-wrap">
+              <div class="icon">
+                <img src="styles/svg/padlock-outlined-svgrepo-com.svg" alt="" />
+              </div>
               <input
                 id="password"
                 type="password"
-                placeholder="Enter Password"
-                autocomplete="current-password"
+                placeholder="Enter your password"
+                autocomplete="new-password"
               />
             </div>
             <small class="password-error"></small>
-
-            <a href="#" class="forgot-link">Forgot Password?</a>
           </div>
 
           <!-- Button -->
-          <button class="btn-signin" type="submit">Sign In</button>
+          <button class="btn-signin" type="submit">Sign Up</button>
         </form>
 
         <!-- Footer -->
         <p class="panel-footer">
-          Don't have an account? <a href="singup-page.html">Sign up</a>
+          Already have an account? <a href="index.html">Login</a>
         </p>
       </div>
 
@@ -72,21 +92,18 @@
       <div class="right-panel">
         <img
           class="bg-image"
-          src="styles/images/download - 2026-05-07T134545.837.jpg"
+          src="styles/images/Futuristic Energy Pathway.jpg"
           alt="Background"
         />
-
         <div class="panel-content">
-          <h2>Welcome!</h2>
+          <h2>Hey There, Welcome!</h2>
           <p class="tagline">
-            A platform for creating and managing surveys to <br />
-            collect meaningful feedback.
+            Create surveys, collect responses, and gain insights.
           </p>
-
-          <a href="#" class="learn-more">Learn More</a>
         </div>
       </div>
     </div>
-    <script src="index.js"></script>
+
+    <script src="signup.js"></script>
   </body>
 </html>
